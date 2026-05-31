@@ -1,0 +1,208 @@
+:root {
+    --dark: #1f1f1f;
+    --teal: #13bedb;
+    --white: #ffffff;
+    --black: #111111;
+    --border: 2px solid #13bedb;
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--dark);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand p {
+    color: var(--white);
+    margin-top: 4px;
+}
+
+nav a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+nav a:hover {
+    color: var(--white);
+}
+
+main {
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px 20px 60px;
+}
+
+.card {
+    background-color: var(--dark);
+    color: var(--white);
+    width: 220px;
+    padding: 18px;
+    border: var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card h2 {
+    color: var(--teal);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.card:hover {
+    background-color: var(--teal);
+    color: var(--black);
+    transform: scale(1.05);
+}
+
+.card:hover h2 {
+    color: var(--black);
+}
+
+/* Contact page */
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+.contact-section::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--teal);
+    margin: 0 auto 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: var(--border);
+    border-radius: var(--radius);
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: var(--dark);
+    color: var(--teal);
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--teal);
+    color: var(--black);
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: var(--dark);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--teal);
+}
+
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
