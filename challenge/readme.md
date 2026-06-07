@@ -39,3 +39,5 @@ This project uses the Week 2 course concepts:
 
 Add GitHub Pages link here after deployment.
 
+https://github.com/Maria-Dragomir/Multiple-page-website.git
+
